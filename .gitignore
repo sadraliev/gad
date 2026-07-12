@@ -9,3 +9,5 @@ credentials.yaml
 config.yaml
 .vscode/
 .idea/
+docs/design.html
+docs/design.pdf
