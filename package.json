@@ -1,0 +1,30 @@
+{
+  "name": "gad",
+  "version": "0.0.1",
+  "description": "CLI for querying keyword statistics from the Google Ads API",
+  "type": "module",
+  "bin": {
+    "gad": "./dist/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "google-ads",
+    "keywords",
+    "cli",
+    "seo",
+    "keyword-research"
+  ],
+  "author": "Adilet Sadraliev <a.sadraliev@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sadraliev/gad.git"
+  }
+}
