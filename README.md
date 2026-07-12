@@ -103,6 +103,33 @@ Credentials and configuration are stored under the standard XDG config path:
 
 Files are written with `0600` permissions. Nothing is committed to the repository.
 
+## Development
+
+```
+npm install
+npm run build          # compile TypeScript to dist/
+npm link               # make `gad` available globally
+
+# or, without linking:
+node dist/index.js --help
+```
+
+For rapid iteration without a build step, run TypeScript directly:
+
+```
+npx tsx src/index.ts --help
+```
+
+Currently implemented commands:
+
+- `gad config set <key> <value>`
+- `gad config get <key>`
+- `gad config unset <key>`
+- `gad config show [--reveal]`
+- `gad config path`
+
+Valid config keys: `developer_token`, `customer_id`, `login_customer_id`, `default_geo`, `default_language`.
+
 ## Author
 
 Adilet Sadraliev — personal project, non-commercial.
