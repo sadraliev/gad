@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { ZodError } from "zod";
 import { registerConfigCommand } from "./commands/config.js";
+import { registerAuthCommand } from "./commands/auth.js";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const pkg = JSON.parse(readFileSync(join(here, "..", "package.json"), "utf8")) as {
@@ -22,6 +23,7 @@ program
   .showHelpAfterError();
 
 registerConfigCommand(program);
+registerAuthCommand(program);
 
 program.parseAsync(process.argv).catch((err: unknown) => {
   if (err instanceof ZodError) {
