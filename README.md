@@ -62,8 +62,11 @@ Can be done in parallel with waiting for developer token review.
 
 1. Open https://console.cloud.google.com/ and create a new project (e.g. `gad-cli`).
 2. **APIs & Services → Library → Google Ads API → Enable**.
-3. **APIs & Services → OAuth consent screen**: choose **External** and add your own Google account to **Test users**. Without this, refresh tokens issued while the consent screen is in Testing status expire every 7 days.
-4. **APIs & Services → Credentials → Create Credentials → OAuth client ID**. Application type: **Desktop app**. Download the client-secret JSON — you will point `gad auth login` at it.
+3. **APIs & Services → OAuth consent screen**: choose **User Type: External**, fill in App name, User support email, Developer contact email, save.
+4. **BLOCKING — add yourself as a test user.** In the new Google Cloud Console UI this lives under **APIs & Services → OAuth consent screen → Audience → Test users → + ADD USERS**. Add the exact Gmail address you will use to sign in during `gad auth login`. Without this step Google returns `Error 403: access_denied — has not completed the Google verification process` and the OAuth flow cannot complete — the app is in Testing publishing status and only listed test users are permitted to authenticate. This is not a warning; it is a hard block.
+5. **APIs & Services → Credentials → Create Credentials → OAuth client ID**. Application type: **Desktop app**. Download the client-secret JSON — you will point `gad auth login` at it.
+
+If you are signed into multiple Google accounts in your browser, open an incognito window before running `gad auth login`. Google will otherwise silently pick one of your other accounts and produce the same `403 access_denied` error even though the correct account is in Test users.
 
 ### 4. Customer ID
 
