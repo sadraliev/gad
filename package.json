@@ -28,7 +28,9 @@
     "url": "git+https://github.com/sadraliev/gad.git"
   },
   "dependencies": {
+    "cli-table3": "^0.6.5",
     "commander": "^15.0.0",
+    "google-ads-api": "^24.1.0",
     "google-auth-library": "^10.9.0",
     "yaml": "^2.9.0",
     "zod": "^4.4.3"
