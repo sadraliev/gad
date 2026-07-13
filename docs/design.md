@@ -75,6 +75,27 @@ No results, requests, or credentials are transmitted anywhere other than to Goog
 
 No mutations to campaigns, ad groups, keywords, budgets, or any other Google Ads entity are performed by this tool. No conversion tracking, no remarketing, no reporting on account performance.
 
+### 5.1 Supported campaign types
+
+**None.** The tool does not support, create, edit, or manage any Google Ads campaign type (Search, Display, Video, Shopping, Performance Max, Demand Gen, App, or any other). Campaigns are outside the scope of this tool entirely.
+
+### 5.2 Google Ads capabilities provided
+
+The tool provides exactly one capability from the Google Ads capability catalogue:
+
+- **Keyword Planning Services** — historical metrics lookup via `KeywordPlanIdeaService.GenerateKeywordHistoricalMetrics`.
+
+The tool explicitly does **not** provide any of the following:
+
+- Account Creation
+- Account Management
+- Campaign Creation
+- Campaign Management
+- Reporting (in the sense of account/campaign performance reports)
+- App Conversion Tracking
+- Remarketing / audience management
+- Any other capability
+
 ## 6. Authentication and authorization
 
 - **OAuth 2.0 authorization code flow with PKCE**, loopback redirect variant. Implemented per RFC 8252 (OAuth 2.0 for Native Apps). The out-of-band flow is not used.

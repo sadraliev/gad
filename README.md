@@ -54,6 +54,8 @@ A Google Ads developer token is only issued to Manager accounts, not to regular 
 3. **Test Access** is granted quickly and works only against test accounts. `KeywordPlanIdeaService` returns placeholder data under Test Access.
 4. **Basic Access** requires a manual review (usually several days to a week). This is what you need for real search-volume data.
 
+The Basic Access application is a separate, longer form. See [`docs/basic-access.md`](docs/basic-access.md) for a field-by-field walkthrough, ready-to-paste answers, and the process for regenerating the required design document PDF.
+
 ### 3. Google Cloud OAuth client
 
 Can be done in parallel with waiting for developer token review.
